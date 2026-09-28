@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:crushed_raw_tungsten",
+      "required": false
+    },
+    {
+      "id": "northstar:crushed_raw_tungsten",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea/*
+!.idea/scopes
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+runs
+
+neoforge/server
+neoforge/run
+.idea
+
+# logs and scratch files
+logs/
+**/logs/
+*.log
+*.log.gz
+*.tmp
+*.stackdump
+__pycache__/
+
+# claude / ai tooling
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.claude-*
+.mcp.json
+
+# The shared library is a local clone of aa-modlib, not part of this repo.
+/libs/

@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_andesite"
+    }
+  ],
+  "type": "create:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_andesite"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:andesite"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "count": 9,
+      "id": "createmetalwork:crushed_andesite"
+    },
+    {
+      "chance": 0.1,
+      "id": "createmetalwork:crushed_andesite"
+    },
+    {
+      "chance": 0.55,
+      "id": "create:experience_nugget"
+    }
+  ]
+}

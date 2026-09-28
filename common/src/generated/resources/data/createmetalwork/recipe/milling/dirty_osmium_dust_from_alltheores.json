@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/osmium"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ],
+  "type": "create:milling",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/osmium"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/osmium"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "alltheores:dirty_osmium_dust"
+    },
+    {
+      "chance": 0.25,
+      "id": "alltheores:dirty_osmium_dust"
+    }
+  ]
+}

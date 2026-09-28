@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/morkite"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_morkite"
+    }
+  ],
+  "type": "createmetallurgy:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/morkite"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_morkite"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/morkite"
+    }
+  ],
+  "processing_time": 60,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_morkite"
+    }
+  ]
+}

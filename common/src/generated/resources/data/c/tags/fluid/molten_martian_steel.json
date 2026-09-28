@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_martian_steel",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_martian_steel",
+      "required": false
+    }
+  ]
+}

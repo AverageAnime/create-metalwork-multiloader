@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_tungsten",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_tungsten",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_tungsten",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_tungsten",
+      "required": false
+    }
+  ]
+}

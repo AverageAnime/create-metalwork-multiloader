@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_lithium",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_lithium",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_lithium",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_lithium",
+      "required": false
+    }
+  ]
+}

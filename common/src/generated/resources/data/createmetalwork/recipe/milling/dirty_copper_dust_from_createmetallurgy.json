@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/copper"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    }
+  ],
+  "type": "create:milling",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/copper"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/copper"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "createmetallurgy:dirty_copper_dust"
+    },
+    {
+      "chance": 0.25,
+      "id": "createmetallurgy:dirty_copper_dust"
+    }
+  ]
+}

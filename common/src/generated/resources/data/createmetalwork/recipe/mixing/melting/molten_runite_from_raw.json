@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/runite"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_runite"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/runite"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_runite"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/runite"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_runite"
+    }
+  ]
+}

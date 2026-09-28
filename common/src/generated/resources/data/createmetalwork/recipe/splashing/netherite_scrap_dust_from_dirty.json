@@ -1,0 +1,60 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dirty_dusts/netherite_scrap"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "ids": [
+        "netherite_scrap_dust",
+        "dirty_netherite_scrap_dust"
+      ]
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dirty_dusts/netherite_scrap"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "ids": [
+        "netherite_scrap_dust",
+        "dirty_netherite_scrap_dust"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:dirty_dusts/netherite_scrap"
+    }
+  ],
+  "results": [
+    {
+      "id": "createmetalwork:netherite_scrap_dust"
+    },
+    {
+      "chance": 0.5,
+      "count": 2,
+      "id": "minecraft:gold_nugget"
+    }
+  ]
+}

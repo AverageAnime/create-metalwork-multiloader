@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/martian_steel"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_martian_steel"
+    }
+  ],
+  "type": "createmetallurgy:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/martian_steel"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_martian_steel"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/martian_steel"
+    }
+  ],
+  "processing_time": 60,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_martian_steel"
+    }
+  ]
+}

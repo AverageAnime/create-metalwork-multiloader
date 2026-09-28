@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createbigcannons"
+    }
+  ],
+  "type": "createmetallurgy:alloying",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createbigcannons"
+      ]
+    }
+  ],
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 720,
+      "tag": "c:molten_cast_iron"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "amount": 720,
+      "id": "createbigcannons:molten_nethersteel"
+    }
+  ]
+}

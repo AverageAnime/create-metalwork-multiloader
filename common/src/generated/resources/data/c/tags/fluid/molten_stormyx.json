@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_stormyx",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_stormyx",
+      "required": false
+    }
+  ]
+}

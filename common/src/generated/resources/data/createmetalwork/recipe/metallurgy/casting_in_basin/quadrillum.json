@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/quadrillum"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_quadrillum"
+    }
+  ],
+  "type": "createmetallurgy:casting_in_basin",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:storage_blocks/quadrillum"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_quadrillum"
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 810,
+      "fluid": "createmetalwork:molten_quadrillum"
+    }
+  ],
+  "processing_time": 320,
+  "result": {
+    "tag": "c:storage_blocks/quadrillum"
+  }
+}

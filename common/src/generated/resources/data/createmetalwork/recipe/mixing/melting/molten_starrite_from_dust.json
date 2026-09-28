@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/starrite"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_starrite"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/starrite"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_starrite"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:dusts/starrite"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_starrite"
+    }
+  ]
+}

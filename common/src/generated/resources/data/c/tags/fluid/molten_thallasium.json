@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_thallasium",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_thallasium",
+      "required": false
+    }
+  ]
+}

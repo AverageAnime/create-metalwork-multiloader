@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_zinc",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_zinc",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_zinc",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_zinc",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_zinc",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_zinc",
+      "required": false
+    }
+  ]
+}

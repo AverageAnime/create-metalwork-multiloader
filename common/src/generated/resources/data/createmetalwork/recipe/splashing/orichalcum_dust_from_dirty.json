@@ -1,0 +1,59 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dirty_dusts/orichalcum"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "ids": [
+        "orichalcum_dust",
+        "dirty_orichalcum_dust"
+      ]
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dirty_dusts/orichalcum"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "ids": [
+        "orichalcum_dust",
+        "dirty_orichalcum_dust"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:dirty_dusts/orichalcum"
+    }
+  ],
+  "results": [
+    {
+      "id": "createmetalwork:orichalcum_dust"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:quartz"
+    }
+  ]
+}

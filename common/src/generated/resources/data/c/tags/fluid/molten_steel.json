@@ -1,0 +1,44 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_steel",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_steel",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_steel",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_steel",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_steel",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_steel",
+      "required": false
+    },
+    {
+      "id": "tfmg:flowing_molten_steel",
+      "required": false
+    },
+    {
+      "id": "tfmg:molten_steel",
+      "required": false
+    },
+    {
+      "id": "createbigcannons:flowing_molten_steel",
+      "required": false
+    },
+    {
+      "id": "createbigcannons:molten_steel",
+      "required": false
+    }
+  ]
+}

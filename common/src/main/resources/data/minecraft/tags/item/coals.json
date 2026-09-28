@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "create_ironworks:coal_dust",
+            "required": false
+        },
+        {
+            "id": "create_ironworks:charcoal_dust",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/cast_iron"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createbigcannons"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_cast_iron"
+    }
+  ],
+  "type": "createmetallurgy:casting_in_table",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/cast_iron"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createbigcannons"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_cast_iron"
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 90,
+      "fluid": "createmetalwork:molten_cast_iron"
+    },
+    {
+      "item": "createmetallurgy:graphite_ingot_mold"
+    }
+  ],
+  "processing_time": 60,
+  "result": {
+    "tag": "c:ingots/cast_iron"
+  }
+}

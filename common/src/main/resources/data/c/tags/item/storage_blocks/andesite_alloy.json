@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "create:andesite_alloy_block",
+            "required": false
+        }
+    ]
+}

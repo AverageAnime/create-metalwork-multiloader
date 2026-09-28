@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/manganese"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "dirty_manganese_dust"
+    }
+  ],
+  "type": "create:milling",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/manganese"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "dirty_manganese_dust"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/manganese"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "createmetalwork:dirty_manganese_dust"
+    },
+    {
+      "chance": 0.25,
+      "id": "createmetalwork:dirty_manganese_dust"
+    }
+  ]
+}

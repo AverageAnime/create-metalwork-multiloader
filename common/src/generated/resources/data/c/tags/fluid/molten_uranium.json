@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_uranium",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_uranium",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_uranium",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_uranium",
+      "required": false
+    }
+  ]
+}

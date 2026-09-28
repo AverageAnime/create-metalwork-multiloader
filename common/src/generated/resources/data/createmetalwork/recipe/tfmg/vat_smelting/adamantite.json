@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/adamantite"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_adamantite"
+    }
+  ],
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:cast_iron_vat"
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/adamantite"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_adamantite"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:dusts/adamantite"
+    },
+    {
+      "item": "tfmg:coal_coke_dust"
+    }
+  ],
+  "machines": [
+    "tfmg:mixing"
+  ],
+  "min_size": 12,
+  "processing_time": 300,
+  "results": [
+    {
+      "chance": 0.9,
+      "id": "tfmg:coal_coke_dust"
+    },
+    {
+      "amount": 180,
+      "id": "createmetalwork:molten_adamantite"
+    },
+    {
+      "amount": 180,
+      "id": "tfmg:molten_slag"
+    }
+  ]
+}

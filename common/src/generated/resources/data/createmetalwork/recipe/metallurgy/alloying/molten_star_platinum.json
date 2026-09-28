@@ -1,0 +1,55 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_star_platinum"
+    }
+  ],
+  "type": "createmetallurgy:alloying",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_star_platinum"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_starrite"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_platinum"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_star_platinum"
+    }
+  ]
+}

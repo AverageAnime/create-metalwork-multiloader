@@ -1,0 +1,96 @@
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev'
+}
+
+def commonResources = rootProject.project(':common').projectDir.toPath()
+        .resolve('src/main/resources').toFile().absolutePath
+
+neoForge {
+    version = neoforge_version
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.from(at.absolutePath)
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        configureEach {
+            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})" // Unify the run config names with fabric
+        }
+        client {
+            client()
+            // Lets a dev-time addon that is still a source tree be picked up without building a jar.
+            systemProperty 'createmetalwork.addonRoots',
+                    providers.systemProperty('createmetalwork.addonRoots').getOrElse('')
+        }
+        data {
+            data()
+            // Its own game directory, so datagen never loads whatever the dev run's mods folder holds.
+            // Generated output has to depend on committed source alone, and a mod sitting in run/mods
+            // both joins the generation and can fail it outright when its own dependencies are absent.
+            setGameDirectory(file('build/datagen'))
+            // Generated resources must depend only on committed source, so these are empty unless an
+            // addon root is named explicitly. An addon supplies both its spec and its hand-authored
+            // recipes, and the second is what RecipeGenerator mirrors into shaped variants.
+            systemProperty 'createmetalwork.addonRoots',
+                    providers.systemProperty('createmetalwork.addonRoots').getOrElse('')
+            systemProperty 'createmetalwork.recipeSourceRoots',
+                    providers.systemProperty('createmetalwork.recipeSourceRoots').getOrElse('')
+            programArguments.addAll '--mod', mod_id, '--all',
+                    '--output', file('../common/src/generated/resources').absolutePath,
+                    '--existing', file('src/main/resources').absolutePath,
+                    '--existing', file('../common/src/main/resources').absolutePath
+        }
+        server {
+            server()
+            setGameDirectory(file('server'))
+        }
+    }
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url "https://cursemaven.com"
+                }
+            }
+            filter {
+                includeGroup "curse.maven"
+            }
+        }
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+        exclusiveContent {
+            forRepository {
+                maven { url = "https://api.modrinth.com/maven" }
+            }
+            filter {
+                includeGroup "maven.modrinth"
+            }
+        }
+    }
+
+    dependencies {
+        // Create is deliberately absent from the compile classpath. Every use of it is reflective
+        // (see the shared RecipeReflection) or gated on the mod being loaded, so nothing here needs to
+        // name a Create type. Keeping it off the classpath is what makes that guarantee checkable
+        // rather than aspirational.
+
+    }
+}
+
+sourceSets.main.resources { srcDir '../common/src/generated/resources' }
+
+tasks.named('processResources') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+

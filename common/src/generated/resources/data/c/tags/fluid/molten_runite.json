@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_runite",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_runite",
+      "required": false
+    }
+  ]
+}

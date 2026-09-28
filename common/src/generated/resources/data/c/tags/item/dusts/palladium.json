@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:palladium_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:palladium_dust",
+      "required": false
+    }
+  ]
+}

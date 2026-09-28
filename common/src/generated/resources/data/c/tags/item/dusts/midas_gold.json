@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:midas_gold_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:midas_gold_dust",
+      "required": false
+    }
+  ]
+}

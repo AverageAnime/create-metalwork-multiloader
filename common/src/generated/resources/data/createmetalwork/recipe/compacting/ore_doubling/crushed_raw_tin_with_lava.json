@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_simple_ore_doubling"
+    }
+  ],
+  "type": "create:compacting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create_simple_ore_doubling"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/tin"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 50,
+      "fluid": "minecraft:lava"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "create:crushed_raw_tin"
+    },
+    {
+      "chance": 0.05,
+      "id": "create_simple_ore_doubling:slag"
+    }
+  ]
+}

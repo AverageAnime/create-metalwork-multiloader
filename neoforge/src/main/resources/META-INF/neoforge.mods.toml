@@ -1,0 +1,48 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_version_range}"
+license = "${license}"
+issueTrackerURL = "https://github.com/AverageAnime/create-metalwork-multiloader/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+authors = "${mod_author}"
+description = '''${description}'''
+logoFile = "${mod_id}.png"
+
+# Raises Create's basin from two fluid inputs to four, so an alloy of three or more metals can be
+# written directly instead of through an intermediate that exists only to get under the limit.
+# Applied only when Create is present; see CreateCompatMixinPlugin.
+[[mixins]]
+config = "${mod_id}.create.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+# Optional on purpose. Every use of Create is either reflective or gated on it being loaded, so the
+# fluids register and behave with or without it; only the processing recipes need it.
+[[dependencies.${mod_id}]]
+modId = "create"
+type = "optional"
+versionRange = "[6.0.0,6.1.0)"
+ordering = "AFTER"
+side = "BOTH"
+# Load after so this mod's data pack overrides its recipes.
+[[dependencies.${mod_id}]]
+modId="tfmg"
+type="optional"
+versionRange="[1.2.0,)"
+ordering="AFTER"
+side="BOTH"

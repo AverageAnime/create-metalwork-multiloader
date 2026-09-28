@@ -1,0 +1,65 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/platinum"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ],
+  "type": "tfmg:industrial_blasting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/platinum"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    }
+  ],
+  "hot_air_usage": 20,
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/platinum"
+    },
+    {
+      "tag": "tfmg:flux"
+    }
+  ],
+  "processing_time": 20,
+  "results": [
+    {
+      "amount": 90,
+      "id": "alltheores:molten_platinum"
+    },
+    {
+      "amount": 90,
+      "id": "tfmg:molten_slag"
+    },
+    {
+      "amount": 200,
+      "id": "tfmg:furnace_gas"
+    }
+  ]
+}

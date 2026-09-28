@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:banglum_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:banglum_dust",
+      "required": false
+    }
+  ]
+}

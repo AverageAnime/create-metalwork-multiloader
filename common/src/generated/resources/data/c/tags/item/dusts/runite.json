@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:runite_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:runite_dust",
+      "required": false
+    }
+  ]
+}

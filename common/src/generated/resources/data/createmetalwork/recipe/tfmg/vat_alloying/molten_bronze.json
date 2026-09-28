@@ -1,0 +1,100 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createmetallurgy"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createbigcannons"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_bronze"
+    }
+  ],
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:cast_iron_vat"
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createmetallurgy"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createbigcannons"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_bronze"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 270,
+      "tag": "c:molten_copper"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_tin"
+    }
+  ],
+  "machines": [
+    "tfmg:mixing"
+  ],
+  "min_size": 18,
+  "processing_time": 350,
+  "results": [
+    {
+      "amount": 360,
+      "id": "createmetalwork:molten_bronze"
+    }
+  ]
+}

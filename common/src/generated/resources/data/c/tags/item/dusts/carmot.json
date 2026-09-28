@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:carmot_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:carmot_dust",
+      "required": false
+    }
+  ]
+}

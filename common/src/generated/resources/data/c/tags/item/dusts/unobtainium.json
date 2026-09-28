@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:unobtainium_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:unobtainium_dust",
+      "required": false
+    }
+  ]
+}

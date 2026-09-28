@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_iron",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_iron",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_iron",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_iron",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_iron",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_iron",
+      "required": false
+    }
+  ]
+}

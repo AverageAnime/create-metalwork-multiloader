@@ -1,0 +1,68 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/cast_iron"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createbigcannons"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_cast_iron"
+    }
+  ],
+  "type": "createmetallurgy:bulk_melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:storage_blocks/cast_iron"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createbigcannons"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_cast_iron"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/cast_iron"
+    }
+  ],
+  "minHeatRequirement": 3,
+  "processing_time": 224,
+  "results": [
+    {
+      "amount": 810,
+      "id": "createmetalwork:molten_cast_iron"
+    }
+  ]
+}

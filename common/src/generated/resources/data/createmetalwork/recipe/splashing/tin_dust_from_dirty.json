@@ -1,0 +1,75 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dirty_dusts/tin"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "ids": [
+        "tin_dust",
+        "dirty_tin_dust"
+      ]
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dirty_dusts/tin"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "ids": [
+        "tin_dust",
+        "dirty_tin_dust"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:dirty_dusts/tin"
+    }
+  ],
+  "results": [
+    {
+      "id": "createmetalwork:tin_dust"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:redstone"
+    }
+  ]
+}

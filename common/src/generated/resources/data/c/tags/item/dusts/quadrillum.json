@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:quadrillum_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:quadrillum_dust",
+      "required": false
+    }
+  ]
+}

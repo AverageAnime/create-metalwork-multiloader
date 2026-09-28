@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createbigcannons:flowing_molten_nethersteel",
+      "required": false
+    },
+    {
+      "id": "createbigcannons:molten_nethersteel",
+      "required": false
+    }
+  ]
+}

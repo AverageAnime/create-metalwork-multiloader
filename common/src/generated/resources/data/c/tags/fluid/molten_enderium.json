@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "alltheores:flowing_molten_enderium",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_enderium",
+      "required": false
+    }
+  ]
+}

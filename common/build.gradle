@@ -1,0 +1,88 @@
+plugins {
+    id 'multiloader-common'
+    id 'net.neoforged.moddev'
+}
+
+neoForge {
+    neoFormVersion = neo_form_version
+    def at = file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.from(at.absolutePath)
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+}
+
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven { url = "https://api.modrinth.com/maven" }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+dependencies {
+    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
+    compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.4.1'
+    annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.4.1'
+    // The shared TomlListReader parses <modid>-common.toml during mod construction. Fabric Loader and
+    // NeoForge both bundle night-config, so it is safe to compile against it here.
+    compileOnly group: 'com.electronwill.night-config', name: 'core', version: '3.8.0'
+    compileOnly group: 'com.electronwill.night-config', name: 'toml', version: '3.8.0'
+}
+
+// The shared library is authored under dev.averageanime.lib and rewritten into this mod's own root
+// before compilation, so Create: Food and Create: Metalwork never ship the same fully-qualified class.
+// Source relocation rather than a shaded jar because the library is a git submodule, not an artifact.
+def sharedSrc = rootProject.file('libs/aa-shared/src/main/java')
+def relocateShared = tasks.register('relocateShared', Copy) {
+    description = 'Rewrite the shared library into ' + shared_relocate_root
+    onlyIf { sharedSrc.exists() }
+    from(sharedSrc)
+    into layout.buildDirectory.dir('generated/shared-src')
+    def fromPkg = 'dev.averageanime.lib'
+    def fromDir = fromPkg.replace('.', '/')
+    def toDir = shared_relocate_root.replace('.', '/')
+    filter { line -> line.replace(fromPkg, shared_relocate_root) }
+    eachFile { it.path = it.path.replace(fromDir, toDir) }
+    includeEmptyDirs = false
+}
+sourceSets.main.java.srcDir(relocateShared)
+
+configurations {
+    commonJava {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+    commonResources {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+}
+
+// One artifact per source directory rather than `.singleFile`, which throws as
+// soon as a second srcDir exists (the shared-library submodule adds one).
+// Consumers take these as a FileCollection via `source(configurations.commonJava)`
+// and `from(configurations.commonResources)`, both of which already accept N dirs.
+artifacts {
+    // builtBy so a loader module taking these as source still triggers the relocation first
+    sourceSets.main.java.sourceDirectories.each { dir -> commonJava(dir) { builtBy(relocateShared) } }
+    sourceSets.main.resources.sourceDirectories.each { commonResources it }
+}
+
+// Minecraft is put on the main classpath by the modding plugin rather than by
+// a plain `implementation` dependency, so the test source set does not inherit
+// it the usual way and has to be pointed at main's classpath directly.
+sourceSets {
+    test {
+        compileClasspath += sourceSets.main.compileClasspath + sourceSets.main.output
+        runtimeClasspath += sourceSets.main.runtimeClasspath + sourceSets.main.output
+    }
+}
+

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_kyber",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_kyber",
+      "required": false
+    }
+  ]
+}

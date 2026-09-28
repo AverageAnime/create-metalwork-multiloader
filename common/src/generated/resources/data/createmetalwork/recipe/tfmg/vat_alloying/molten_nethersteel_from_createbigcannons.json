@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createbigcannons"
+    }
+  ],
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:cast_iron_vat"
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createbigcannons"
+      ]
+    }
+  ],
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 360,
+      "tag": "c:molten_steel"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    }
+  ],
+  "machines": [
+    "tfmg:mixing"
+  ],
+  "min_size": 18,
+  "processing_time": 350,
+  "results": [
+    {
+      "amount": 720,
+      "id": "createbigcannons:molten_nethersteel"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_celestium",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_celestium",
+      "required": false
+    }
+  ]
+}

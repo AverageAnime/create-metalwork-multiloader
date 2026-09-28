@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/aquarium"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_aquarium"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/aquarium"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_aquarium"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/aquarium"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_aquarium"
+    }
+  ]
+}

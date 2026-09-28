@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:manganese_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:manganese_dust",
+      "required": false
+    }
+  ]
+}

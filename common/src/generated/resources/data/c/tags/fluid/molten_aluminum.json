@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_aluminum",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_aluminum",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_aluminum",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_aluminum",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_aluminum",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_aluminum",
+      "required": false
+    }
+  ]
+}

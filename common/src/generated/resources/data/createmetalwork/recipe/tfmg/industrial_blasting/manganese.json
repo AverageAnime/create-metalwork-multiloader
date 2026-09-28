@@ -1,0 +1,63 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/manganese"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_manganese"
+    }
+  ],
+  "type": "tfmg:industrial_blasting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/manganese"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_manganese"
+    }
+  ],
+  "hot_air_usage": 20,
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/manganese"
+    },
+    {
+      "tag": "tfmg:flux"
+    }
+  ],
+  "processing_time": 20,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_manganese"
+    },
+    {
+      "amount": 90,
+      "id": "tfmg:molten_slag"
+    },
+    {
+      "amount": 200,
+      "id": "tfmg:furnace_gas"
+    }
+  ]
+}

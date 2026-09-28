@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_palladium",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_palladium",
+      "required": false
+    }
+  ]
+}

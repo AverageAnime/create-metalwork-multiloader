@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:adamantite_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:adamantite_dust",
+      "required": false
+    }
+  ]
+}

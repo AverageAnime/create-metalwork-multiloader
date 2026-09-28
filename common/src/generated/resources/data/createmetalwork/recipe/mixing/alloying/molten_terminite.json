@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betterend"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_terminite"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betterend"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_terminite"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_iron"
+    },
+    {
+      "item": "betterend:ender_dust"
+    }
+  ],
+  "results": [
+    {
+      "amount": 180,
+      "id": "createmetalwork:molten_terminite"
+    }
+  ]
+}

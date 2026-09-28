@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_osmium",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_osmium",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_osmium",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_osmium",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_osmium",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_osmium",
+      "required": false
+    }
+  ]
+}

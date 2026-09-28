@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_manganese",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_manganese",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_silver",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_silver",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_silver",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_silver",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_silver",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_silver",
+      "required": false
+    }
+  ]
+}

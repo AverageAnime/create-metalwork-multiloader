@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_durasteel"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_durasteel"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_quadrillum"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_manganese"
+    }
+  ],
+  "results": [
+    {
+      "amount": 360,
+      "id": "createmetalwork:molten_durasteel"
+    }
+  ]
+}

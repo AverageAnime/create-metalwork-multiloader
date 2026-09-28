@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/orichadium"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_orichadium"
+    }
+  ],
+  "type": "createmetallurgy:casting_in_table",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/orichadium"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_orichadium"
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 90,
+      "fluid": "createmetalwork:molten_orichadium"
+    },
+    {
+      "item": "createmetallurgy:graphite_ingot_mold"
+    }
+  ],
+  "processing_time": 60,
+  "result": {
+    "tag": "c:ingots/orichadium"
+  }
+}

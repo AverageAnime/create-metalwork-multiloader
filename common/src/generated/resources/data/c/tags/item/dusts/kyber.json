@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:kyber_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:kyber_dust",
+      "required": false
+    }
+  ]
+}

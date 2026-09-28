@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:mythril_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:mythril_dust",
+      "required": false
+    }
+  ]
+}

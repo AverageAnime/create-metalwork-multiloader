@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/orichalcum"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_orichalcum"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/orichalcum"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_orichalcum"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/orichalcum"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_orichalcum"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_magnetic_alloy"
+    }
+  ],
+  "type": "createmetallurgy:alloying",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_magnetic_alloy"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 180,
+      "tag": "c:molten_nickel"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_silicon"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 180,
+      "tag": "c:molten_steel"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "amount": 180,
+      "id": "createmetalwork:molten_magnetic_alloy"
+    }
+  ]
+}

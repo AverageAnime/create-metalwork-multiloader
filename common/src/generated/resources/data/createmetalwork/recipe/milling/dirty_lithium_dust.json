@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/lithium"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "dirty_lithium_dust"
+    }
+  ],
+  "type": "create:milling",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/lithium"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "dirty_lithium_dust"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/lithium"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "createmetalwork:dirty_lithium_dust"
+    },
+    {
+      "chance": 0.25,
+      "id": "createmetalwork:dirty_lithium_dust"
+    }
+  ]
+}

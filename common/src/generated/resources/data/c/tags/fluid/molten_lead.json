@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_lead",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_lead",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_lead",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_lead",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_lead",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_lead",
+      "required": false
+    }
+  ]
+}

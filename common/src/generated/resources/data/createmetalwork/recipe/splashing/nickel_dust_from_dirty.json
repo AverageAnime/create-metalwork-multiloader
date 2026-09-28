@@ -1,0 +1,75 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dirty_dusts/nickel"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "ids": [
+        "nickel_dust",
+        "dirty_nickel_dust"
+      ]
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dirty_dusts/nickel"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "ids": [
+        "nickel_dust",
+        "dirty_nickel_dust"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:dirty_dusts/nickel"
+    }
+  ],
+  "results": [
+    {
+      "id": "createmetalwork:nickel_dust"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:clay_ball"
+    }
+  ]
+}

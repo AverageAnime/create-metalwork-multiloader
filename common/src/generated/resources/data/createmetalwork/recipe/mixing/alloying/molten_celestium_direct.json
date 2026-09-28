@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_celestium"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_celestium"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_starrite"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_platinum"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_kyber"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_carmot"
+    },
+    {
+      "tag": "c:crushed_unobtainium"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_celestium"
+    }
+  ]
+}

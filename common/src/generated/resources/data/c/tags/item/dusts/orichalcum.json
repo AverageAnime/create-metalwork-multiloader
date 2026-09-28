@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:orichalcum_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:orichalcum_dust",
+      "required": false
+    }
+  ]
+}

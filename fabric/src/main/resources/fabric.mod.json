@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [ "${mod_author}" ],
+    "contact": {
+        "sources": "https://github.com/AverageAnime/create-metalwork-multiloader"
+    },
+    "license": "${license}",
+    "icon": "${mod_id}.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [ "dev.averageanime.createmetalwork.fabric.CreateMetalwork" ],
+        "client": [ "dev.averageanime.createmetalwork.fabric.CreateMetalworkClient" ]
+    },
+    "mixins": [
+        "${mod_id}.lib.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=${java_version}"
+    },
+    "suggests": {
+        "create": "*"
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_magnetic_alloy",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_magnetic_alloy",
+      "required": false
+    }
+  ]
+}

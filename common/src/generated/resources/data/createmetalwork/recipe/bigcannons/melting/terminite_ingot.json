@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createbigcannons"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/terminite"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_terminite"
+    }
+  ],
+  "type": "createbigcannons:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createbigcannons"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/terminite"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_terminite"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:ingots/terminite"
+    }
+  ],
+  "processing_time": 180,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_terminite"
+    }
+  ]
+}

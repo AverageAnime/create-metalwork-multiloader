@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:aquarium_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:aquarium_dust",
+      "required": false
+    }
+  ]
+}

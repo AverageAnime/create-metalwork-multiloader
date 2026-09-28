@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:tin_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:tin_dust",
+      "required": false
+    }
+  ]
+}

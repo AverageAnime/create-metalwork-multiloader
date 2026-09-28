@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "tfmg:flowing_liquid_silicon",
+      "required": false
+    },
+    {
+      "id": "tfmg:liquid_silicon",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:stormyx_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:stormyx_dust",
+      "required": false
+    }
+  ]
+}

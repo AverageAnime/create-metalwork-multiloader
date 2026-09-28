@@ -1,0 +1,13 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+// The multiloader convention plugins live in the shared library, so this build is the one already
+// proven against Create: Food rather than a hand-copied variant.
+def sharedGradle = file('../libs/aa-shared/gradle')
+if (!sharedGradle.exists()) {
+    throw new GradleException(
+            "Shared library missing at ${sharedGradle}. It is a local clone, not a submodule. "
+                    + "Run: git clone https://github.com/AverageAnime/aa-modlib.git libs/aa-shared")
+}
+sourceSets.main.groovy.srcDir sharedGradle

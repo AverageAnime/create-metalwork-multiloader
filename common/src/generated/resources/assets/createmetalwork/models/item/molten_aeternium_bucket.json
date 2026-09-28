@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createmetalwork:item/molten_aeternium_bucket"
+  }
+}

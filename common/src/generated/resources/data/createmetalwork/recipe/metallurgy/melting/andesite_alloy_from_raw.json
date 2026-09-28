@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/andesite_alloy"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_andesite_alloy"
+    }
+  ],
+  "type": "createmetallurgy:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/andesite_alloy"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_andesite_alloy"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/andesite_alloy"
+    }
+  ],
+  "processing_time": 60,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_andesite_alloy"
+    }
+  ]
+}

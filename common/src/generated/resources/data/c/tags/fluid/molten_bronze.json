@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_bronze",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_bronze",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:flowing_molten_bronze",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_bronze",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_bronze",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_bronze",
+      "required": false
+    },
+    {
+      "id": "createbigcannons:flowing_molten_bronze",
+      "required": false
+    },
+    {
+      "id": "createbigcannons:molten_bronze",
+      "required": false
+    }
+  ]
+}

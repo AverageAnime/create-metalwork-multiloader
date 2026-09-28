@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:prometheum_dust",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:prometheum_dust",
+      "required": false
+    }
+  ]
+}

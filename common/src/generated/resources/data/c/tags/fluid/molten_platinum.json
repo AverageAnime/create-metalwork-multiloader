@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "createmetalwork:flowing_molten_platinum",
+      "required": false
+    },
+    {
+      "id": "createmetalwork:molten_platinum",
+      "required": false
+    },
+    {
+      "id": "alltheores:flowing_molten_platinum",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_platinum",
+      "required": false
+    }
+  ]
+}
