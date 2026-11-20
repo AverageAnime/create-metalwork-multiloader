@@ -1,0 +1,58 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ic2"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "ic2"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mekanism"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "create:crushed_raw_uranium"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "ic2:nugget_uranium"
+    },
+    {
+      "chance": 0.5,
+      "id": "mekanism:nugget_lead"
+    }
+  ]
+}

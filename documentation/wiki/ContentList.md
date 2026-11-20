@@ -1,4 +1,4 @@
-### ***3.0.0***
+### ***3.1.0***
 
 ---
 
@@ -6,9 +6,10 @@
 
 | Fluid                                   | Registers                                                           |
 |-----------------------------------------|---------------------------------------------------------------------|
-| `createmetalwork:molten_andesite_alloy` | always                                                              |
+| `createmetalwork:molten_andesite_alloy` | with `create`                                                       |
 | `createmetalwork:molten_andesite`       | always                                                              |
 | `createmetalwork:molten_brass`          | unless `alltheores`, `createmetallurgy`                             |
+| `createmetalwork:molten_constantan`     | with `tfmg`, unless `alltheores`, `createmetallurgy`                |
 | `createmetalwork:molten_copper`         | unless `alltheores`, `createmetallurgy`                             |
 | `createmetalwork:molten_gold`           | unless `alltheores`, `createmetallurgy`                             |
 | `createmetalwork:molten_iron`           | unless `alltheores`, `createmetallurgy`                             |
@@ -39,7 +40,7 @@
 | `createmetalwork:molten_metallurgium`   | with `mythicmetals`                                                 |
 | `createmetalwork:molten_midas_gold`     | with `mythicmetals`                                                 |
 | `createmetalwork:molten_morkite`        | with `mythicmetals`                                                 |
-| `createmetalwork:molten_mythril`        | any `mythicmetals`, `create_dd`                                     |
+| `createmetalwork:molten_mythril`        | with `mythicmetals`                                                 |
 | `createmetalwork:molten_orichalcum`     | with `mythicmetals`                                                 |
 | `createmetalwork:molten_palladium`      | with `mythicmetals`                                                 |
 | `createmetalwork:molten_prometheum`     | with `mythicmetals`                                                 |
@@ -76,10 +77,11 @@
 | `createmetalwork:crushed_raw_banglum`      | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_carmot`       | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_cincinnasite` | with `betternether`                                     |
+| `createmetalwork:crushed_raw_iridium`      | with `alltheores`                                       |
 | `createmetalwork:crushed_raw_kyber`        | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_manganese`    | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_midas_gold`   | with `mythicmetals`                                     |
-| `createmetalwork:crushed_raw_mythril`      | any `mythicmetals`, `create_dd`                         |
+| `createmetalwork:crushed_raw_mythril`      | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_orichalcum`   | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_palladium`    | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_prometheum`   | with `mythicmetals`                                     |
@@ -87,63 +89,83 @@
 | `createmetalwork:crushed_raw_runite`       | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_stormyx`      | with `mythicmetals`                                     |
 | `createmetalwork:crushed_raw_thallasium`   | with `betterend`                                        |
-| `createmetalwork:crushed_raw_tungsten`     | any `createmetallurgy`, `northstar`, unless `northstar` |
+| `createmetalwork:crushed_raw_titanium`     | with `northstar`                                        |
 
 ### Dirty Dusts
 
-| Item                                         | Registers                                      |
-|----------------------------------------------|------------------------------------------------|
-| `createmetalwork:dirty_andesite_dust`        | always                                         |
-| `createmetalwork:dirty_lead_dust`            | unless `alltheores`, `mekanism`                |
-| `createmetalwork:dirty_netherite_scrap_dust` | always                                         |
-| `createmetalwork:dirty_nickel_dust`          | unless `alltheores`                            |
-| `createmetalwork:dirty_tin_dust`             | unless `alltheores`, `mekanism`                |
-| `createmetalwork:dirty_adamantite_dust`      | with `mythicmetals`                            |
-| `createmetalwork:dirty_aquarium_dust`        | with `mythicmetals`                            |
-| `createmetalwork:dirty_banglum_dust`         | with `mythicmetals`                            |
-| `createmetalwork:dirty_carmot_dust`          | with `mythicmetals`                            |
-| `createmetalwork:dirty_cincinnasite_dust`    | with `betternether`                            |
-| `createmetalwork:dirty_kyber_dust`           | with `mythicmetals`                            |
-| `createmetalwork:dirty_lithium_dust`         | unless `createmetallurgy`, `mekanism`          |
-| `createmetalwork:dirty_manganese_dust`       | with `mythicmetals`                            |
-| `createmetalwork:dirty_midas_gold_dust`      | with `mythicmetals`                            |
-| `createmetalwork:dirty_mythril_dust`         | any `mythicmetals`, `create_dd`                |
-| `createmetalwork:dirty_orichalcum_dust`      | with `mythicmetals`                            |
-| `createmetalwork:dirty_palladium_dust`       | with `mythicmetals`                            |
-| `createmetalwork:dirty_prometheum_dust`      | with `mythicmetals`                            |
-| `createmetalwork:dirty_quadrillum_dust`      | with `mythicmetals`                            |
-| `createmetalwork:dirty_runite_dust`          | with `mythicmetals`                            |
-| `createmetalwork:dirty_starrite_dust`        | with `mythicmetals`                            |
-| `createmetalwork:dirty_stormyx_dust`         | with `mythicmetals`                            |
-| `createmetalwork:dirty_thallasium_dust`      | with `betterend`                               |
-| `createmetalwork:dirty_tungsten_dust`        | unless `createmetallurgy`                      |
+| Item                                         | Registers                                           |
+|----------------------------------------------|-----------------------------------------------------|
+| `createmetalwork:dirty_andesite_dust`        | always                                              |
+| `createmetalwork:dirty_lead_dust`            | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:dirty_netherite_scrap_dust` | always                                              |
+| `createmetalwork:dirty_nickel_dust`          | unless `alltheores`                                 |
+| `createmetalwork:dirty_tin_dust`             | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:dirty_aluminum_dust`        | unless `alltheores`                                 |
+| `createmetalwork:dirty_copper_dust`          | unless `alltheores`, `createmetallurgy`, `mekanism` |
+| `createmetalwork:dirty_gold_dust`            | unless `alltheores`, `createmetallurgy`, `mekanism` |
+| `createmetalwork:dirty_iron_dust`            | unless `alltheores`, `createmetallurgy`, `mekanism` |
+| `createmetalwork:dirty_osmium_dust`          | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:dirty_platinum_dust`        | unless `alltheores`                                 |
+| `createmetalwork:dirty_silver_dust`          | unless `alltheores`                                 |
+| `createmetalwork:dirty_uranium_dust`         | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:dirty_zinc_dust`            | unless `alltheores`, `createmetallurgy`             |
+| `createmetalwork:dirty_adamantite_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:dirty_aquarium_dust`        | with `mythicmetals`                                 |
+| `createmetalwork:dirty_banglum_dust`         | with `mythicmetals`                                 |
+| `createmetalwork:dirty_carmot_dust`          | with `mythicmetals`                                 |
+| `createmetalwork:dirty_cincinnasite_dust`    | with `betternether`                                 |
+| `createmetalwork:dirty_kyber_dust`           | with `mythicmetals`                                 |
+| `createmetalwork:dirty_lithium_dust`         | unless `createmetallurgy`                           |
+| `createmetalwork:dirty_manganese_dust`       | with `mythicmetals`                                 |
+| `createmetalwork:dirty_midas_gold_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:dirty_mythril_dust`         | with `mythicmetals`                                 |
+| `createmetalwork:dirty_orichalcum_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:dirty_palladium_dust`       | with `mythicmetals`                                 |
+| `createmetalwork:dirty_prometheum_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:dirty_quadrillum_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:dirty_runite_dust`          | with `mythicmetals`                                 |
+| `createmetalwork:dirty_starrite_dust`        | with `mythicmetals`                                 |
+| `createmetalwork:dirty_stormyx_dust`         | with `mythicmetals`                                 |
+| `createmetalwork:dirty_thallasium_dust`      | with `betterend`                                    |
+| `createmetalwork:dirty_titanium_dust`        | with `northstar`                                    |
+| `createmetalwork:dirty_tungsten_dust`        | unless `createmetallurgy`                           |
 
 ### Dusts
 
-| Item                                   | Registers                                      |
-|----------------------------------------|------------------------------------------------|
-| `createmetalwork:andesite_dust`        | always                                         |
-| `createmetalwork:lead_dust`            | unless `alltheores`, `mekanism`                |
-| `createmetalwork:netherite_scrap_dust` | always                                         |
-| `createmetalwork:nickel_dust`          | unless `alltheores`                            |
-| `createmetalwork:tin_dust`             | unless `alltheores`, `mekanism`                |
-| `createmetalwork:adamantite_dust`      | with `mythicmetals`                            |
-| `createmetalwork:aquarium_dust`        | with `mythicmetals`                            |
-| `createmetalwork:banglum_dust`         | with `mythicmetals`                            |
-| `createmetalwork:carmot_dust`          | with `mythicmetals`                            |
-| `createmetalwork:cincinnasite_dust`    | with `betternether`                            |
-| `createmetalwork:kyber_dust`           | with `mythicmetals`                            |
-| `createmetalwork:lithium_dust`         | unless `createmetallurgy`, `mekanism`          |
-| `createmetalwork:manganese_dust`       | with `mythicmetals`                            |
-| `createmetalwork:midas_gold_dust`      | with `mythicmetals`                            |
-| `createmetalwork:mythril_dust`         | with `mythicmetals`                            |
-| `createmetalwork:orichalcum_dust`      | with `mythicmetals`                            |
-| `createmetalwork:palladium_dust`       | with `mythicmetals`                            |
-| `createmetalwork:prometheum_dust`      | with `mythicmetals`                            |
-| `createmetalwork:quadrillum_dust`      | with `mythicmetals`                            |
-| `createmetalwork:runite_dust`          | with `mythicmetals`                            |
-| `createmetalwork:starrite_dust`        | with `mythicmetals`                            |
-| `createmetalwork:stormyx_dust`         | with `mythicmetals`                            |
-| `createmetalwork:thallasium_dust`      | with `betterend`                               |
-| `createmetalwork:tungsten_dust`        | unless `createmetallurgy`                      |
-| `createmetalwork:unobtainium_dust`     | with `mythicmetals`                            |
+| Item                                   | Registers                                           |
+|----------------------------------------|-----------------------------------------------------|
+| `createmetalwork:andesite_dust`        | always                                              |
+| `createmetalwork:lead_dust`            | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:netherite_scrap_dust` | always                                              |
+| `createmetalwork:nickel_dust`          | unless `alltheores`                                 |
+| `createmetalwork:tin_dust`             | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:aluminum_dust`        | unless `alltheores`                                 |
+| `createmetalwork:copper_dust`          | unless `alltheores`, `createmetallurgy`, `mekanism` |
+| `createmetalwork:gold_dust`            | unless `alltheores`, `createmetallurgy`, `mekanism` |
+| `createmetalwork:iron_dust`            | unless `alltheores`, `createmetallurgy`, `mekanism` |
+| `createmetalwork:osmium_dust`          | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:platinum_dust`        | unless `alltheores`                                 |
+| `createmetalwork:silver_dust`          | unless `alltheores`                                 |
+| `createmetalwork:uranium_dust`         | unless `alltheores`, `mekanism`                     |
+| `createmetalwork:zinc_dust`            | unless `alltheores`, `createmetallurgy`             |
+| `createmetalwork:adamantite_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:aquarium_dust`        | with `mythicmetals`                                 |
+| `createmetalwork:banglum_dust`         | with `mythicmetals`                                 |
+| `createmetalwork:carmot_dust`          | with `mythicmetals`                                 |
+| `createmetalwork:cincinnasite_dust`    | with `betternether`                                 |
+| `createmetalwork:kyber_dust`           | with `mythicmetals`                                 |
+| `createmetalwork:lithium_dust`         | unless `createmetallurgy`                           |
+| `createmetalwork:manganese_dust`       | with `mythicmetals`                                 |
+| `createmetalwork:midas_gold_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:mythril_dust`         | with `mythicmetals`                                 |
+| `createmetalwork:orichalcum_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:palladium_dust`       | with `mythicmetals`                                 |
+| `createmetalwork:prometheum_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:quadrillum_dust`      | with `mythicmetals`                                 |
+| `createmetalwork:runite_dust`          | with `mythicmetals`                                 |
+| `createmetalwork:starrite_dust`        | with `mythicmetals`                                 |
+| `createmetalwork:stormyx_dust`         | with `mythicmetals`                                 |
+| `createmetalwork:thallasium_dust`      | with `betterend`                                    |
+| `createmetalwork:titanium_dust`        | with `northstar`                                    |
+| `createmetalwork:tungsten_dust`        | unless `createmetallurgy`                           |
+| `createmetalwork:unobtainium_dust`     | with `mythicmetals`                                 |

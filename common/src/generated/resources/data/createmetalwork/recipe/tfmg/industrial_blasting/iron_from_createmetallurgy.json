@@ -50,7 +50,7 @@
   "processing_time": 20,
   "results": [
     {
-      "amount": 90,
+      "amount": 180,
       "id": "createmetallurgy:molten_iron"
     },
     {

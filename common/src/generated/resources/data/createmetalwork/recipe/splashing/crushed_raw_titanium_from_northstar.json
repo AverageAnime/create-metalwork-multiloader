@@ -1,0 +1,65 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/titanium"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "northstar"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_raw_titanium"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/titanium"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "northstar"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_raw_titanium"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/titanium"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "northstar:titanium_nugget"
+    },
+    {
+      "chance": 0.5,
+      "count": 2,
+      "id": "minecraft:iron_nugget"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/nickel"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/nickel"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    }
+  ],
+  "ingredient": {
+    "tag": "c:dusts/nickel"
+  },
+  "result": {
+    "id": "tfmg:nickel_ingot"
+  }
+}

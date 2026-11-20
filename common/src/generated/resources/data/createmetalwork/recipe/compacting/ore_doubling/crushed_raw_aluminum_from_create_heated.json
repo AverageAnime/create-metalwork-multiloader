@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_simple_ore_doubling"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/aluminum"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:compacting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create_simple_ore_doubling"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/aluminum"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/aluminum"
+    }
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "create:crushed_raw_aluminum"
+    },
+    {
+      "chance": 0.15,
+      "id": "create_simple_ore_doubling:slag"
+    }
+  ]
+}

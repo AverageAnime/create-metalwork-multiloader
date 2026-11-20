@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/iridium"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ],
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/iridium"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    }
+  ],
+  "ingredient": {
+    "tag": "c:dusts/iridium"
+  },
+  "result": {
+    "id": "alltheores:iridium_ingot"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "createmetalwork:crushed_raw_tungsten",
+      "id": "createmetallurgy:crushed_raw_tungsten",
       "required": false
     },
     {

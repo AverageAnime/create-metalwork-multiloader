@@ -1,0 +1,85 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dirty_dusts/platinum"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "ids": [
+        "platinum_dust",
+        "dirty_platinum_dust"
+      ]
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dirty_dusts/platinum"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "ids": [
+        "platinum_dust",
+        "dirty_platinum_dust"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mekanism"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:dirty_dusts/platinum"
+    }
+  ],
+  "results": [
+    {
+      "id": "createmetalwork:platinum_dust"
+    },
+    {
+      "chance": 0.5,
+      "id": "mekanism:nugget_osmium"
+    }
+  ]
+}

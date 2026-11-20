@@ -52,16 +52,21 @@
       "id": "molten_platinum"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:raw_materials/platinum"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,
       "id": "createmetalwork:molten_platinum"
+    },
+    {
+      "amount": 45,
+      "id": "createmetallurgy:molten_slag"
     }
   ]
 }

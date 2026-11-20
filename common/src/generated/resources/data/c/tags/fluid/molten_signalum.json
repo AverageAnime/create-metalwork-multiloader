@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "alltheores:flowing_molten_signalum",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_signalum",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/iridium"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_raw_iridium"
+    }
+  ],
+  "type": "create:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/iridium"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_raw_iridium"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/iridium"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "createmetalwork:crushed_raw_iridium"
+    },
+    {
+      "chance": 0.75,
+      "id": "create:experience_nugget"
+    }
+  ]
+}

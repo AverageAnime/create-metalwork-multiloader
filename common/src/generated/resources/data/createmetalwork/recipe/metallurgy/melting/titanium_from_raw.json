@@ -36,16 +36,21 @@
       "id": "molten_titanium"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:raw_materials/titanium"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,
       "id": "createmetalwork:molten_titanium"
+    },
+    {
+      "amount": 45,
+      "id": "createmetallurgy:molten_slag"
     }
   ]
 }

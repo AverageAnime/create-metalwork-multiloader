@@ -20,10 +20,12 @@ public final class ConfigBootstrap {
 
     private ConfigBootstrap() {}
 
-    public static List<String> read(String key, List<String> defaults) {
-        if (Services.PLATFORM.isRunningDataGen()) return defaults;
-        return RegistryCondition.inherit(reader().read(key, defaults), defaults,
-                ConfigBootstrap::idOf, CreateMetalworkCommon.LOGGER);
+    public static RegistryCondition.Resolved read(String key, List<String> defaults) {
+        if (Services.PLATFORM.isRunningDataGen()) return new RegistryCondition.Resolved(defaults, 0);
+        return RegistryCondition.resolve(
+                RegistryCondition.inherit(reader().read(key, defaults), defaults,
+                        ConfigBootstrap::idOf, CreateMetalworkCommon.LOGGER),
+                ConfigBootstrap::idOf, Services.PLATFORM, "", CreateMetalworkCommon.LOGGER);
     }
 
     /** A stored list with no condition handling; {@code @} clauses are meaningless here. */

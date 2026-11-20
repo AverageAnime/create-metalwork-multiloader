@@ -36,12 +36,13 @@
       "id": "molten_mythantite"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:nuggets/mythantite"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 4,
   "results": [
     {
       "amount": 10,

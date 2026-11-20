@@ -1,0 +1,58 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "iceandfire"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "iceandfire"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mekanism"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "create:crushed_raw_silver"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "iceandfire:silver_nugget"
+    },
+    {
+      "chance": 0.5,
+      "id": "mekanism:nugget_lead"
+    }
+  ]
+}

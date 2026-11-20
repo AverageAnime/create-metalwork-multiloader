@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetallurgy:flowing_molten_necromium",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_necromium",
+      "required": false
+    }
+  ]
+}

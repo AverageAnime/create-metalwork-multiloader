@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/mythril"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "mythril_dust"
+    }
+  ],
+  "type": "mekanism:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mekanism"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/mythril"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "mythril_dust"
+    }
+  ],
+  "input": {
+    "count": 1,
+    "tag": "c:ingots/mythril"
+  },
+  "output": {
+    "count": 1,
+    "id": "createmetalwork:mythril_dust"
+  }
+}

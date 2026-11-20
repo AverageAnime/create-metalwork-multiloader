@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_netherite_scrap"
+    }
+  ],
+  "type": "create:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_netherite_scrap"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:ancient_debris"
+    }
+  ],
+  "processing_time": 350,
+  "results": [
+    {
+      "count": 2,
+      "id": "createmetalwork:crushed_netherite_scrap"
+    },
+    {
+      "chance": 0.25,
+      "id": "createmetalwork:crushed_netherite_scrap"
+    },
+    {
+      "chance": 0.75,
+      "id": "create:experience_nugget"
+    },
+    {
+      "chance": 0.125,
+      "id": "minecraft:netherrack"
+    }
+  ]
+}

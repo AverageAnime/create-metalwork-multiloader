@@ -1,0 +1,88 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:slag"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "tfmg:bitumen"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "results": [
+    {
+      "count": 64,
+      "id": "tfmg:asphalt_mixture"
+    },
+    {
+      "count": 64,
+      "id": "tfmg:asphalt_mixture"
+    },
+    {
+      "count": 64,
+      "id": "tfmg:asphalt_mixture"
+    },
+    {
+      "count": 64,
+      "id": "tfmg:asphalt_mixture"
+    }
+  ]
+}

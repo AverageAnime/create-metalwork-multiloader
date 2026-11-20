@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "tfmg:slag",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:slag",
+      "required": false
+    },
+    {
+      "id": "create_simple_ore_doubling:slag",
+      "required": false
+    }
+  ]
+}

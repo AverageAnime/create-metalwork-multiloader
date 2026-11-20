@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/adamantite"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_raw_adamantite"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/adamantite"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_raw_adamantite"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/adamantite"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "mythicmetals:adamantite_nugget"
+    },
+    {
+      "chance": 0.5,
+      "id": "create:powdered_obsidian"
+    }
+  ]
+}

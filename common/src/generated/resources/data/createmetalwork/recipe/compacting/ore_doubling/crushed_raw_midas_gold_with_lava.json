@@ -1,0 +1,69 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_simple_ore_doubling"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_raw_midas_gold"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/midas_gold"
+      }
+    }
+  ],
+  "type": "create:compacting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create_simple_ore_doubling"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_raw_midas_gold"
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:raw_materials/midas_gold"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/midas_gold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 50,
+      "fluid": "minecraft:lava"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "createmetalwork:crushed_raw_midas_gold"
+    },
+    {
+      "chance": 0.05,
+      "id": "create_simple_ore_doubling:slag"
+    }
+  ]
+}

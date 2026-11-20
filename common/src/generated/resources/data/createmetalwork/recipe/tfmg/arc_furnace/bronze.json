@@ -1,0 +1,122 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dirty_dusts/bronze"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createmetallurgy"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "alltheores"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createbigcannons"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_bronze"
+    }
+  ],
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:firebrick_lined_vat"
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dirty_dusts/bronze"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createmetallurgy"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "alltheores"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createbigcannons"
+        ]
+      }
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_bronze"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:dirty_dusts/bronze"
+    },
+    {
+      "tag": "tfmg:flux"
+    },
+    {
+      "item": "tfmg:coal_coke_dust"
+    }
+  ],
+  "machines": [
+    "tfmg:graphite_electrode",
+    "tfmg:graphite_electrode",
+    "tfmg:graphite_electrode"
+  ],
+  "min_size": 9,
+  "processing_time": 40,
+  "results": [
+    {
+      "chance": 0.9,
+      "id": "tfmg:coal_coke_dust"
+    },
+    {
+      "amount": 216,
+      "id": "createmetalwork:molten_bronze"
+    },
+    {
+      "amount": 180,
+      "id": "tfmg:molten_slag"
+    }
+  ]
+}

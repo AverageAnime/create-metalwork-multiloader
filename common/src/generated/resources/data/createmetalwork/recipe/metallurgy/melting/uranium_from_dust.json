@@ -52,12 +52,13 @@
       "id": "molten_uranium"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:dusts/uranium"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 20,
   "results": [
     {
       "amount": 90,

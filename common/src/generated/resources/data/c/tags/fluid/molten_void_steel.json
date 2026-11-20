@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetallurgy:flowing_molten_void_steel",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_void_steel",
+      "required": false
+    }
+  ]
+}

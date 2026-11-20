@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/runite"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_raw_runite"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/runite"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_raw_runite"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/runite"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "mythicmetals:runite_nugget"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:flint"
+    }
+  ]
+}

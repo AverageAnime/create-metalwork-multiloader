@@ -1,0 +1,55 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createmetallurgy"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "northstar"
+    }
+  ],
+  "type": "create:compacting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:not",
+      "value": {
+        "condition": "fabric:all_mods_loaded",
+        "values": [
+          "createmetallurgy"
+        ]
+      }
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "northstar"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_tungsten"
+    }
+  ],
+  "results": [
+    {
+      "id": "northstar:tungsten_ingot"
+    }
+  ]
+}

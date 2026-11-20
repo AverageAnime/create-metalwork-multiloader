@@ -4,6 +4,10 @@
         {
             "id": "create:crushed_raw_tin",
             "required": false
+        },
+        {
+            "id": "create_ironworks:crushed_raw_tin",
+            "required": false
         }
     ]
 }

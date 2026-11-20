@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mekanism"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "create:crushed_raw_lead"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "mekanism:nugget_lead"
+    },
+    {
+      "chance": 0.5,
+      "count": 2,
+      "id": "create:zinc_nugget"
+    }
+  ]
+}

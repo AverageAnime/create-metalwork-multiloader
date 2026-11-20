@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "type": "tfmg:vat_machine_recipe",
+  "allowed_vat_types": [
+    "tfmg:cast_iron_vat",
+    "tfmg:steel_vat",
+    "tfmg:firebrick_lined_vat"
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_slag"
+    }
+  ],
+  "machines": [
+    "tfmg:centrifuge"
+  ],
+  "min_size": 1,
+  "processing_time": 100,
+  "results": [
+    {
+      "chance": 0.075,
+      "id": "minecraft:iron_nugget"
+    },
+    {
+      "chance": 0.075,
+      "id": "create:copper_nugget"
+    },
+    {
+      "chance": 0.075,
+      "id": "minecraft:gold_nugget"
+    },
+    {
+      "chance": 0.075,
+      "id": "create:zinc_nugget"
+    }
+  ]
+}

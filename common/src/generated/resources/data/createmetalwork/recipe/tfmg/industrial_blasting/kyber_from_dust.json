@@ -1,0 +1,59 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/kyber"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_kyber"
+    }
+  ],
+  "type": "tfmg:industrial_blasting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/kyber"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_kyber"
+    }
+  ],
+  "hot_air_usage": 20,
+  "ingredients": [
+    {
+      "tag": "c:dusts/kyber"
+    },
+    {
+      "tag": "tfmg:flux"
+    }
+  ],
+  "processing_time": 20,
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetalwork:molten_kyber"
+    },
+    {
+      "amount": 20,
+      "id": "tfmg:furnace_gas"
+    }
+  ]
+}

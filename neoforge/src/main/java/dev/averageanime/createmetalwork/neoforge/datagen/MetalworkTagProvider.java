@@ -19,19 +19,32 @@ import java.util.concurrent.CompletableFuture;
 
 public class MetalworkTagProvider extends IntrinsicHolderTagsProvider<Item> {
 
-    // Metals with a full dust chain: a clean dust and the dirty dust it is washed from.
+    // Metals with a full dust chain: a clean dust and the dirty dust it is washed from. Must match
+    // MetalworkRecipeProvider.DUSTS: its recipes read these tags, so a metal missing here has a dust
+    // that nothing can smelt, melt or wash.
     private static final List<String> DUSTS = List.of(
             "adamantite", "andesite", "aquarium", "banglum", "carmot",
             "cincinnasite", "kyber", "lead", "lithium", "manganese",
             "midas_gold", "mythril", "netherite_scrap", "nickel", "orichalcum",
             "palladium", "prometheum", "quadrillum", "runite", "starrite",
-            "stormyx", "thallasium", "tin", "tungsten");
+            "stormyx", "thallasium", "tin", "titanium", "tungsten",
+            "copper", "gold", "iron", "zinc", "aluminum", "osmium", "platinum", "silver", "uranium");
 
     private static final List<String> MYTHIC_DUSTS = List.of(
             "adamantite", "aquarium", "banglum", "bronze", "carmot", "celestium", "copper", "durasteel",
             "gold", "hallowed", "kyber", "manganese", "metallurgium", "midas_gold", "mythril",
             "orichalcum", "osmium", "palladium", "platinum", "prometheum", "quadrillum", "runite",
             "silver", "star_platinum", "steel", "stormyx", "tin", "unobtainium");
+
+    /**
+     * Mythic Metals metals with a raw ore, which it does not publish a conventional tag for. Osmium,
+     * platinum, silver and tin matter as much as the rest: Create crushes c:raw_materials/<metal>, so
+     * without them those four raw ores could not be crushed at all in a Mythic Metals pack.
+     */
+    private static final List<String> MYTHIC_RAW = List.of(
+            "adamantite", "aquarium", "banglum", "carmot", "kyber", "manganese", "midas_gold",
+            "mythril", "orichalcum", "osmium", "palladium", "platinum", "prometheum", "quadrillum",
+            "runite", "silver", "stormyx", "tin");
 
     private record ForeignIngot(String metal, String item) {}
 
@@ -91,10 +104,45 @@ public class MetalworkTagProvider extends IntrinsicHolderTagsProvider<Item> {
         // The two crushed intermediates that have recipes on both sides.
         appender.tag(conventional("crushed_raw_materials/andesite")).addOptional(own("crushed_andesite"));
         appender.tag(conventional("crushed_raw_materials/netherite_scrap")).addOptional(own("crushed_netherite_scrap"));
-        // Both sides of this one: ours registers only when Northstar is absent, theirs when it is present.
+        // Metallurgy and Northstar each ship a crushed tungsten and tag it only under the flat
+        // c:crushed_raw_materials, so without this every crushed-tungsten recipe keyed on the metal
+        // missed Metallurgy's, the one most packs have.
         appender.tag(conventional("crushed_raw_materials/tungsten"))
-                .addOptional(own("crushed_raw_tungsten"))
+                .addOptional(ResourceLocation.parse("createmetallurgy:crushed_raw_tungsten"))
                 .addOptional(ResourceLocation.parse("northstar:crushed_raw_tungsten"));
+
+        // c:crushed_raw_materials/<metal> is hand-authored under common/src/main/resources for all
+        // thirty-three metals that have one, so only morkite needs adding -- its file was simply missing,
+        // leaving molten_morkite_from_crushed_raw reading a tag nothing defined, so it never loaded.
+        appender.tag(conventional("crushed_raw_materials/morkite")).addOptional(own("crushed_morkite"));
+
+        // Without this the raw side of the chain does not exist for these metals. Mythic Metals
+        // publishes c:raw_materials only for gold and iron -- its own are under
+        // mythicmetals:raw_materials/<metal> -- so every recipe gated on the conventional tag was
+        // false and silently absent, which is also why molten_<metal>_from_raw never loaded for them.
+        // Nesting their tag rather than naming items means a rename on their side cannot break it.
+        for (String metal : MYTHIC_RAW) {
+            appender.tag(conventional("raw_materials/" + metal))
+                    .addOptionalTag(TagKey.create(Registries.ITEM,
+                            ResourceLocation.fromNamespaceAndPath("mythicmetals",
+                                    "raw_materials/" + metal)));
+        }
+        // BetterEnd publishes no raw_materials tag either, and spells the item suffix-first.
+        appender.tag(conventional("raw_materials/thallasium"))
+                .addOptional(ResourceLocation.parse("betterend:thallasium_raw"));
+        // BetterNether's raw form is the shard named after the metal: the ore drops one to three of it,
+        // Fortune-boosted, and each smelts to a single ingot. Nothing crafts it back, so it is safe to crush.
+        appender.tag(conventional("raw_materials/cincinnasite"))
+                .addOptional(ResourceLocation.parse("betternether:cincinnasite"));
+
+        // TFMG's, Metallurgy's and Simple Ore Doubling's solid slag, for the recipes
+        // MetalworkRecipeProvider.slagSolids restates on these tags. All three are put on one rate there,
+        // a block being nine slag, so any of them stands in for any other.
+        for (String mod : new String[] {"tfmg", "createmetallurgy", "create_simple_ore_doubling"}) {
+            appender.tag(conventional("slag")).addOptional(ResourceLocation.fromNamespaceAndPath(mod, "slag"));
+            appender.tag(conventional("storage_blocks/slag"))
+                    .addOptional(ResourceLocation.fromNamespaceAndPath(mod, "slag_block"));
+        }
 
         CreateMetalworkCommon.LOGGER.info("Generated {} item tag entries", appender.emittedCount());
     }

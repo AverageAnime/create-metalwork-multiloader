@@ -69,8 +69,7 @@
     },
     {
       "chance": 0.5,
-      "count": 2,
-      "id": "create:zinc_nugget"
+      "id": "minecraft:gold_nugget"
     }
   ]
 }

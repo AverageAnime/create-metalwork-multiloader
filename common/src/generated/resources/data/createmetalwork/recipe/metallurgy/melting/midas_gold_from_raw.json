@@ -36,16 +36,21 @@
       "id": "molten_midas_gold"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:raw_materials/midas_gold"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,
       "id": "createmetalwork:molten_midas_gold"
+    },
+    {
+      "amount": 45,
+      "id": "createmetallurgy:molten_slag"
     }
   ]
 }

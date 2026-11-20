@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/runite"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    }
+  ],
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/runite"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "ingredient": {
+    "tag": "c:dusts/runite"
+  },
+  "result": {
+    "id": "mythicmetals:runite_ingot"
+  }
+}

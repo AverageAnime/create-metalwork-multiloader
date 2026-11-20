@@ -3,7 +3,7 @@ package dev.averageanime.createmetalwork.fabric.registry;
 import dev.averageanime.createmetalwork.CreateMetalworkCommon;
 import dev.averageanime.createmetalwork.config.AddonDefaults;
 import dev.averageanime.createmetalwork.config.ConfigBootstrap;
-import dev.averageanime.createmetalwork.platform.Services;
+import dev.averageanime.createmetalwork.lib.config.RegistryCondition;
 import dev.averageanime.createmetalwork.lib.fluid.FluidBlock;
 import dev.averageanime.createmetalwork.registry.MoltenFluid;
 
@@ -24,15 +24,11 @@ public final class FluidRegistration {
         // Must precede the first declaration.
         FluidBlock.configure(CreateMetalworkCommon.MOD_ID);
 
-        int skipped = 0;
-        for (String entry : ConfigBootstrap.read(ConfigBootstrap.FLUIDS, AddonDefaults.customFluids())) {
+        RegistryCondition.Resolved configured =
+                ConfigBootstrap.read(ConfigBootstrap.FLUIDS, AddonDefaults.customFluids());
+        for (String entry : configured.kept()) {
             MoltenFluid fluid = MoltenFluid.parse(entry);
             if (fluid == null) continue;
-            if (!fluid.condition().isSatisfied(Services.PLATFORM)) {
-                CreateMetalworkCommon.LOGGER.info("Not registering {}: {}", fluid.id(), fluid.condition().reason(Services.PLATFORM));
-                skipped++;
-                continue;
-            }
             if (BY_ID.containsKey(fluid.id())) {
                 CreateMetalworkCommon.LOGGER.warn("Skipping duplicate fluid entry: {}", fluid.id());
                 continue;
@@ -46,7 +42,7 @@ public final class FluidRegistration {
             BY_ID.put(fluid.id(), built);
         }
         CreateMetalworkCommon.LOGGER.info("Registering {} molten fluids ({} deferred to another mod)",
-                BY_ID.size(), skipped);
+                BY_ID.size(), configured.skipped());
     }
 
     public static void initClient() {

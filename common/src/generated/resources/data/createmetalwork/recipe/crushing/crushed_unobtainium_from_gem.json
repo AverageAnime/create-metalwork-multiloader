@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mythicmetals"
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "crushed_unobtainium"
+    }
+  ],
+  "type": "create:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "crushed_unobtainium"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:ingots/unobtainium"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "createmetalwork:crushed_unobtainium"
+    },
+    {
+      "chance": 0.75,
+      "id": "create:experience_nugget"
+    }
+  ]
+}

@@ -36,16 +36,21 @@
       "id": "molten_terminite"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:raw_materials/terminite"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,
       "id": "createmetalwork:molten_terminite"
+    },
+    {
+      "amount": 45,
+      "id": "createmetallurgy:molten_slag"
     }
   ]
 }

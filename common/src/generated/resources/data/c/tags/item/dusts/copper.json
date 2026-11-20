@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "createmetalwork:copper_dust",
+      "required": false
+    },
+    {
       "id": "mythicmetals:copper_dust",
       "required": false
     }

@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/mythril"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "mythril_dust"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/mythril"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "mythril_dust"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "alltheores:ore_hammers"
+    },
+    {
+      "tag": "c:ingots/mythril"
+    }
+  ],
+  "result": {
+    "id": "createmetalwork:mythril_dust"
+  }
+}

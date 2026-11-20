@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/midas_gold"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "midas_gold_dust"
+    }
+  ],
+  "type": "mekanism:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mekanism"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/midas_gold"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "midas_gold_dust"
+    }
+  ],
+  "input": {
+    "count": 1,
+    "tag": "c:ingots/midas_gold"
+  },
+  "output": {
+    "count": 1,
+    "id": "createmetalwork:midas_gold_dust"
+  }
+}

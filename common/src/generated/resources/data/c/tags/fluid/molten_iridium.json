@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "alltheores:flowing_molten_iridium",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_iridium",
+      "required": false
+    }
+  ]
+}

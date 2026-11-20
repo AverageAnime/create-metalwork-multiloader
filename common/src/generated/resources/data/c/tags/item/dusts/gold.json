@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "createmetalwork:gold_dust",
+      "required": false
+    },
+    {
       "id": "mythicmetals:gold_dust",
       "required": false
     }

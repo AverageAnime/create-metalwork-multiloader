@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "type": "create:splashing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tfmg"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "tfmg:crushed_raw_lithium"
+    }
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "tfmg:lithium_nugget"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:gunpowder"
+    }
+  ]
+}

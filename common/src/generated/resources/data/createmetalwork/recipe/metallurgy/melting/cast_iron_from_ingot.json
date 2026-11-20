@@ -52,12 +52,13 @@
       "id": "molten_cast_iron"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:ingots/cast_iron"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,

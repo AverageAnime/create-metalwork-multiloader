@@ -1,7 +1,7 @@
 ![cmlogofixed2](https://github.com/AverageAnime/create-metalwork/assets/150550990/9b5a9711-dc60-4ca4-9ff3-250773771547)
 
 ### **About:**
-Create: Metalwork makes various molten metal mods work together by filling gaps so molten metals can be processed by any supported machines. Every stage you add increases yield per raw ore. [Create](https://www.curseforge.com/minecraft/mc-mods/create) is not required, but is essential. Read more [here](https://github.com/AverageAnime/create-metalwork-multiloader/wiki/Processing-Guide).
+Create: Metalwork makes various molten metal mods work together by filling gaps so molten metals can be processed by any supported machines. Crushing an ore pays double on Create alone, and every stage you add past that increases yield per raw ore again. [Create](https://www.curseforge.com/minecraft/mc-mods/create) is not required, but is essential. Read more [here](https://github.com/AverageAnime/create-metalwork-multiloader/wiki/Processing-Guide).
 
 These mods are non-essential, but recommended.
 * [AllTheOres](https://www.curseforge.com/minecraft/mc-mods/allthemodium-ores)

@@ -40,6 +40,7 @@ __pycache__/
 .claude/
 CLAUDE.md
 CLAUDE.local.md
+AGENTS.md
 .claude-*
 .mcp.json
 

@@ -36,12 +36,13 @@
       "id": "molten_palladium"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:dusts/palladium"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 20,
   "results": [
     {
       "amount": 90,

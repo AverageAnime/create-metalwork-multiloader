@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/platinum"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/platinum"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    }
+  ],
+  "ingredient": {
+    "tag": "c:dusts/platinum"
+  },
+  "result": {
+    "id": "alltheores:platinum_ingot"
+  }
+}

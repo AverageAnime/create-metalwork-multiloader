@@ -38,12 +38,13 @@
       ]
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:dusts/platinum"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 20,
   "results": [
     {
       "amount": 90,

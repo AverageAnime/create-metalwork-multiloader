@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    }
+  ],
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    }
+  ],
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 120,
+      "tag": "c:molten_silver"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "createmetallurgy:molten_necromium"
+    }
+  ]
+}

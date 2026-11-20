@@ -36,12 +36,13 @@
       "id": "molten_celestium"
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:ingots/celestium"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,

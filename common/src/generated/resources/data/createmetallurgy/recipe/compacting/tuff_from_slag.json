@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    }
+  ],
+  "type": "create:compacting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:slag"
+    },
+    {
+      "tag": "c:slag"
+    },
+    {
+      "tag": "c:slag"
+    },
+    {
+      "tag": "c:slag"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:tuff"
+    }
+  ]
+}

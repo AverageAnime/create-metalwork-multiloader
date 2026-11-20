@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/lithium"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "lithium_dust"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:ingots/lithium"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "lithium_dust"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "alltheores:ore_hammers"
+    },
+    {
+      "tag": "c:ingots/lithium"
+    }
+  ],
+  "result": {
+    "id": "createmetalwork:lithium_dust"
+  }
+}

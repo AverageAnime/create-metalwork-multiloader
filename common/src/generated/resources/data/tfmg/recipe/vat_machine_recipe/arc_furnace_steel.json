@@ -19,13 +19,12 @@
   ],
   "ingredients": [
     {
-      "item": "create:crushed_raw_iron"
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_iron"
     },
     {
-      "tag": "tfmg:flux"
-    },
-    {
-      "item": "tfmg:coal_coke_dust"
+      "tag": "minecraft:coals"
     }
   ],
   "machines": [
@@ -34,19 +33,11 @@
     "tfmg:graphite_electrode"
   ],
   "min_size": 9,
-  "processing_time": 20,
+  "processing_time": 40,
   "results": [
     {
-      "chance": 0.9,
-      "id": "tfmg:coal_coke_dust"
-    },
-    {
-      "amount": 90,
+      "amount": 180,
       "id": "tfmg:molten_steel"
-    },
-    {
-      "amount": 288,
-      "id": "tfmg:molten_slag"
     }
   ]
 }

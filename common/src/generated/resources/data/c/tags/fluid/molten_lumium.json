@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "alltheores:flowing_molten_lumium",
+      "required": false
+    },
+    {
+      "id": "alltheores:molten_lumium",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crushed_raw_materials/adamantite"
+      }
+    },
+    {
+      "type": "createmetalwork:enabled",
+      "id": "molten_adamantite"
+    }
+  ],
+  "type": "createmetallurgy:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:crushed_raw_materials/adamantite"
+      ]
+    },
+    {
+      "condition": "createmetalwork:enabled",
+      "id": "molten_adamantite"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:crushed_raw_materials/adamantite"
+    }
+  ],
+  "processing_time": 48,
+  "results": [
+    {
+      "amount": 180,
+      "id": "createmetalwork:molten_adamantite"
+    },
+    {
+      "amount": 45,
+      "id": "createmetallurgy:molten_slag"
+    }
+  ]
+}

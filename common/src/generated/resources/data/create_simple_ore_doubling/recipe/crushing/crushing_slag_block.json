@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_simple_ore_doubling"
+    }
+  ],
+  "type": "create:crushing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create_simple_ore_doubling"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/slag"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "count": 3,
+      "id": "create:experience_nugget"
+    },
+    {
+      "chance": 0.5,
+      "id": "create:experience_nugget"
+    },
+    {
+      "chance": 0.75,
+      "id": "create:copper_nugget"
+    },
+    {
+      "chance": 0.75,
+      "id": "minecraft:gold_nugget"
+    },
+    {
+      "chance": 0.75,
+      "id": "minecraft:iron_nugget"
+    },
+    {
+      "chance": 0.75,
+      "id": "create:zinc_nugget"
+    }
+  ]
+}

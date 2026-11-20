@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "tfmg:crushed_raw_lithium",
+            "required": false
+        }
+    ]
+}

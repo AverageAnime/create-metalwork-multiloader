@@ -38,12 +38,13 @@
       ]
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:ingots/nethersteel"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 40,
   "results": [
     {
       "amount": 90,

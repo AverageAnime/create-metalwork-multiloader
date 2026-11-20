@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/signalum"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ],
+  "type": "createmetallurgy:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/signalum"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "alltheores"
+      ]
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:dusts/signalum"
+    }
+  ],
+  "processing_time": 20,
+  "results": [
+    {
+      "amount": 90,
+      "id": "alltheores:molten_signalum"
+    }
+  ]
+}

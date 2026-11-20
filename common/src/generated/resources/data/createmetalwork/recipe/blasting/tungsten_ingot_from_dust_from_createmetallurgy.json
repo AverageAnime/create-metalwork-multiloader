@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/tungsten"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    }
+  ],
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:dusts/tungsten"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    }
+  ],
+  "ingredient": {
+    "tag": "c:dusts/tungsten"
+  },
+  "result": {
+    "id": "createmetallurgy:tungsten_ingot"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "tfmg:slag_block",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:slag_block",
+      "required": false
+    },
+    {
+      "id": "create_simple_ore_doubling:slag_block",
+      "required": false
+    }
+  ]
+}

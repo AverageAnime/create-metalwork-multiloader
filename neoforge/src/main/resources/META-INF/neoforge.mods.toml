@@ -46,3 +46,24 @@ type="optional"
 versionRange="[1.2.0,)"
 ordering="AFTER"
 side="BOTH"
+# Same again: metallurgyCrushed rewrites its eleven crushed melting recipes.
+[[dependencies.${mod_id}]]
+modId="createmetallurgy"
+type="optional"
+versionRange="[1.0.0,)"
+ordering="AFTER"
+side="BOTH"
+# Same again: washTungsten rewrites its crushed tungsten washing.
+[[dependencies.${mod_id}]]
+modId="northstar"
+type="optional"
+versionRange="[0.0.0,)"
+ordering="AFTER"
+side="BOTH"
+# Same again: slagSolids rewrites its slag recipes onto the shared slag tags.
+[[dependencies.${mod_id}]]
+modId="create_simple_ore_doubling"
+type="optional"
+versionRange="[1.0.0,)"
+ordering="AFTER"
+side="BOTH"

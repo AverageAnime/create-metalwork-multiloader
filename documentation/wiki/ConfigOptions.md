@@ -1,4 +1,4 @@
-### ***3.0.0***
+### ***3.1.0***
 
 ---
 
@@ -69,6 +69,10 @@ item = [
 Format: `<entry>@<clause>`, chainable as `<entry>@<clause>@<clause>`
 * Every line in `fluid` and `item` may end with a clause which decides whether it registers.
 * The clause goes at the very end of the line, after any `|` fields.
+* **A line with no clause is not unconditional.** It inherits the clause carried by the built-in default
+  of the same name, so deleting a clause from a shipped entry leaves that entry gated exactly as before.
+  This keeps a config written before conditions existed from registering content another mod already
+  ships. Write `@always` to override it.
 > **Note: Changes require a game restart.**
 
 | Clause             | Meaning                                                       |
@@ -76,21 +80,26 @@ Format: `<entry>@<clause>`, chainable as `<entry>@<clause>@<clause>`
 | `@absent:<modids>` | Skip registration if any of them is installed.                |
 | `@mod:<modids>`    | Only register when all of them are installed.                 |
 | `@any:<modids>`    | Several mods could supply it, and one is enough to register.  |
-| `@always`          | Register unconditionally.                                     |
+| `@always`          | Register unconditionally, overriding the default's clause.    |
 
 ```toml
 [blocks]
 fluid = [
   "molten_iron|4|2|7800|70|15@absent:alltheores,createmetallurgy",
-  "molten_uranium|4|2|19100|80|18@absent:alltheores@mod:mekanism"
+  "molten_uranium|4|2|19100|80|18@absent:alltheores@mod:mekanism",
+  "molten_steel|4|2|7900|72|16@always"
 ]
 
 [items]
 item = [
-  "crushed_raw_mythril@any:mythicmetals,create_dd",
-  "crushed_raw_tungsten@any:createmetallurgy,northstar@absent:northstar"
+  "crushed_raw_titanium@mod:northstar",
+  "my_alloy_dust@any:alltheores,createmetallurgy"
 ]
 ```
+
+> **Note:** a line naming an entry the defaults no longer ship still registers it, clause and all.
+> `crushed_raw_tungsten`, retired in 3.1.0 because nothing could produce it, stays in a config written
+> before then until its line is deleted.
 
 ---
 

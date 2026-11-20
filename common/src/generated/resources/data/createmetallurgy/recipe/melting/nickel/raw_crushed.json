@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createmetallurgy"
+    }
+  ],
+  "type": "createmetallurgy:melting",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "createmetallurgy"
+      ]
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "create:crushed_raw_nickel"
+    }
+  ],
+  "processing_time": 48,
+  "results": [
+    {
+      "amount": 180,
+      "id": "createmetallurgy:molten_nickel"
+    },
+    {
+      "amount": 45,
+      "id": "createmetallurgy:molten_slag"
+    }
+  ]
+}

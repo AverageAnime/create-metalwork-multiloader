@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "createmetallurgy:flowing_molten_obdurium",
+      "required": false
+    },
+    {
+      "id": "createmetallurgy:molten_obdurium",
+      "required": false
+    }
+  ]
+}

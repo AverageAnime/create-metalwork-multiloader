@@ -77,6 +77,12 @@ public class MetalworkFluidTagProvider extends TagsProvider<Fluid> {
             }
         }
 
+        // Neither mod tags its slag, and the recipes that consume slag read this one tag so the two
+        // are interchangeable.
+        for (String owner : new String[] {Metals.TFMG, Metals.METALLURGY}) {
+            DatagenHelpers.conventionTag(add, "molten_slag", owner, "molten_slag", "flowing_molten_slag");
+        }
+
         CreateMetalworkCommon.LOGGER.info("Generated {} fluid tag entries", appender.emittedCount());
     }
 }

@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "createmetalwork:platinum_dust",
+      "required": false
+    },
+    {
       "id": "mythicmetals:platinum_dust",
       "required": false
     }

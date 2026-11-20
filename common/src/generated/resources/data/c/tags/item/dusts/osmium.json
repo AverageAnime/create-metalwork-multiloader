@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "createmetalwork:osmium_dust",
+      "required": false
+    },
+    {
       "id": "mythicmetals:osmium_dust",
       "required": false
     }

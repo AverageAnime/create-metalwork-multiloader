@@ -38,12 +38,13 @@
       ]
     }
   ],
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "tag": "c:nuggets/cast_iron"
     }
   ],
-  "processing_time": 60,
+  "processing_time": 4,
   "results": [
     {
       "amount": 10,
